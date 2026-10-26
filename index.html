@@ -61,34 +61,34 @@
 }
 
     .header-top { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    nav { width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 28px; padding: 10px 2% 0; border-top: 1px solid rgba(24, 86, 119, .42); font-family: "Orbitron", sans-serif; font-size: 11px; font-weight: 700; }
+    nav { width: 100%; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 14px 28px; padding: 10px 2% 0; border-top: 1px solid rgba(24, 86, 119, .42); font-family: "Orbitron", sans-serif; font-size: 11px; font-weight: 700; }
     nav a:hover { color: #ff40d4; }
 
     h1, .card h2, .radio-quicklook h2 { font-family: "Orbitron", sans-serif; }
 
     .radio-quicklook {
-      flex: 0 1 760px;
+      flex: 0 1 640px;
       min-width: 0;
       margin: 0;
-      padding: 11px 18px;
+      padding: 8px 13px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 12px;
       border: 2px solid transparent;
-      border-radius: 14px;
+      border-radius: 11px;
       background: linear-gradient(110deg, rgba(5, 21, 37, .98), rgba(12, 17, 39, .98)) padding-box, linear-gradient(110deg, #22eaff 0%, #36eaff 56%, #f333db 100%) border-box;
-      box-shadow: 0 0 20px rgba(33, 224, 245, .2), 0 0 24px rgba(243, 51, 219, .1), inset 0 0 14px rgba(33, 224, 245, .05);
+      box-shadow: 0 0 13px rgba(33, 224, 245, .16), 0 0 16px rgba(243, 51, 219, .08), inset 0 0 10px rgba(33, 224, 245, .04);
     }
-    .radio-segment { min-width: 0; display: flex; align-items: center; gap: 14px; }
-    .radio-segment + .radio-segment { padding-left: 20px; border-left: 1px solid rgba(55, 233, 249, .5); }
-    .radio-icon { width: 38px; height: 38px; flex: none; color: #39efff; filter: drop-shadow(0 0 6px rgba(54, 234, 255, .6)); }
+    .radio-segment { min-width: 0; display: flex; align-items: center; gap: 10px; }
+    .radio-segment + .radio-segment { padding-left: 13px; border-left: 1px solid rgba(55, 233, 249, .5); }
+    .radio-icon { width: 30px; height: 30px; flex: none; color: #39efff; filter: drop-shadow(0 0 6px rgba(54, 234, 255, .6)); }
     .radio-segment:first-child .radio-icon { color: #ef3bd7; }
-    .radio-label { margin: 0 0 4px; color: #55f4f6; font-family: "Orbitron", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .1em; white-space: nowrap; }
-    .radio-main { margin: 0; color: #f33bda; font-family: "Orbitron", sans-serif; font-size: clamp(14px, 1.25vw, 20px); font-weight: 800; letter-spacing: .01em; white-space: nowrap; }
+    .radio-label { margin: 0 0 4px; color: #55f4f6; font-family: "Orbitron", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .07em; white-space: nowrap; }
+    .radio-main { margin: 0; color: #f33bda; font-family: "Orbitron", sans-serif; font-size: clamp(13px, 1vw, 16px); font-weight: 800; letter-spacing: .01em; white-space: nowrap; }
     .radio-main a { color: #58f5fb; text-decoration: none; }
     .radio-main a:hover { color: #fff; }
-    .radio-detail { display: block; margin-top: 3px; color: #b4cddb; font-family: "Rajdhani", sans-serif; font-size: 11px; letter-spacing: .04em; }
+    .radio-detail { display: block; margin-top: 3px; color: #b4cddb; font-family: "Rajdhani", sans-serif; font-size: 10px; letter-spacing: .04em; }
 
     .hero {
       min-height: 490px;
@@ -178,7 +178,7 @@
       header { gap: 12px; }
       .header-top { align-items: flex-start; flex-direction: column; gap: 12px; }
       .brand img { width: 300px !important; max-width: 80vw !important; }
-      nav { justify-content: flex-start; gap: 12px 18px; padding-left: 0; padding-right: 0; }
+      nav { justify-content: flex-start; gap: 12px 16px; padding-left: 0; padding-right: 0; }
       .radio-quicklook { width: 100%; flex: 1 1 auto; }
       .hero { min-height: 420px; padding-top: 55px; padding-bottom: 55px; }
       .cards { grid-template-columns: 1fr; }
