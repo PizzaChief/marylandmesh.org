@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maryland Mesh</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #d9f4ff;
+      background: #030a16;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      min-height: 105px;
+      padding: 20px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      border-bottom: 1px solid #15324d;
+      background: #050c18;
+    }
+
+    .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b9faff;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+  text-shadow: 2px 2px #f02ccf;
+}
+
+.brand-mark {
+  width: 72px;
+  flex: none;
+}
+
+.brand-name b { color: #f34bdc; }
+
+.brand small {
+  display: block;
+  margin-top: 10px;
+  color: #9bbdd2;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-shadow: none;
+}
+
+    nav { display: flex; flex-wrap: wrap; gap: 28px; font-size: 12px; }
+    nav a:hover { color: #ff40d4; }
+
+    .hero {
+      min-height: 490px;
+      padding: 80px 6%;
+      display: flex;
+      align-items: center;
+      background:
+  linear-gradient(90deg,
+    rgba(3, 10, 22, 0.58) 0%,
+    rgba(3, 10, 22, 0.35) 34%,
+    rgba(3, 10, 22, 0.08) 62%,
+    transparent 78%
+  ),
+  url("hero-art-v2.png") center center / cover no-repeat;
+      border-bottom: 1px solid #16405c;
+    }
+
+    .hero-content { max-width: 680px; }
+
+    .eyebrow {
+      color: #b8d6e7;
+      font-size: 12px;
+      letter-spacing: 0.25em;
+    }
+
+    h1 {
+      margin: 16px 0;
+      color: #78faff;
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: 0.95;
+      text-shadow: 3px 3px #e82dca;
+    }
+
+    .hero p { max-width: 570px; font-size: 19px; line-height: 1.6; }
+
+    .buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+    .button {
+      padding: 14px 22px;
+      border: 2px solid #ed32d1;
+      color: #ff60e0;
+      font-weight: bold;
+    }
+
+    .button.secondary { border-color: #20e9ef; color: #4efaff; }
+    .button:hover { background: #17243a; }
+
+    .cards {
+      padding: 24px 5% 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 230px;
+      padding: 25px;
+      border: 1px solid #19dce7;
+      background: linear-gradient(135deg, #0c1b2d, #101329);
+    }
+
+    .card:nth-child(2) { border-color: #21c9e6; }
+    .card:nth-child(3) { border-color: #ee39d0; }
+    .card h2 { color: #65eaff; font-size: 20px; }
+    .card p { color: #c3d9e8; line-height: 1.7; }
+    .card a { color: #ff4bd9; font-weight: bold; }
+
+    footer {
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      border-top: 1px solid #15324d;
+      color: #9bbdd2;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    @media (max-width: 750px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { gap: 14px; }
+      .hero { min-height: 420px; padding-top: 55px; padding-bottom: 55px; }
+      .cards { grid-template-columns: 1fr; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#">
+  <img src="maryland-mesh-logo.png" alt="Maryland Mesh"
+       style="display:block; width:380px; max-width:40vw; height:auto;">
+</a>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="get-started.html">GET STARTED</a>
+      <a href="node-settings.html">NODE SETTINGS</a>
+      <a href="#coverage-map">COVERAGE MAP</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">MESHTASTIC　/　LORA　/　MARYLAND COMMUNITY</div>
+        <h1>BUILD YOUR<br>OWN MESH.</h1>
+        <p>A Maryland community guide to Meshtastic, LoRa nodes, and off-grid communication.</p>
+        <div class="buttons">
+          <a class="button" href="get-started.html">GET STARTED　→</a>
+          <a class="button secondary" href="node-settings.html">EXPLORE NODE SETTINGS　→</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card" id="get-started">
+        <h2>NEW TO<br>MESHTASTIC?</h2>
+        <p>Learn the basics, what you need, and how to get your first node up and running.</p>
+        <a href="get-started.html">GET STARTED　→</a>
+      </article>
+      <article class="card" id="node-settings">
+        <h2>CONFIGURE<br>YOUR NODE</h2>
+        <p>Step-by-step guides, recommended settings, hardware tips, and troubleshooting.</p>
+        <a href="node-settings.html">VIEW NODE SETTINGS　→</a>
+      </article>
+      <article class="card" id="coverage">
+        <h2>FIND THE<br>MESH</h2>
+        <p>Explore local node coverage, community resources, and upcoming events in Maryland.</p>
+        <a href="#coverage-map">OPEN COVERAGE MAP　→</a>
+      </article>
+    </section>
+    <section id="coverage-map" style="max-width:900px; margin:40px auto; padding:32px 6%; text-align:center; border:1px solid #16405c; background:#071426;">
+  <h2 style="color:#54eaff;">MARYLAND COVERAGE MAP</h2>
+  <p style="color:#d5e7f5;">WORK IN PROGRESS</p>
+  <p style="color:#b8cde0;">We’re building a map of Maryland Mesh coverage. Check back soon for local node information.</p>
+</section>
+  </main>
+
+  <footer id="community" style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; padding:16px; width:100%;">
+  <a href="https://www.reddit.com/r/meshtastic/" target="_blank" rel="noopener noreferrer"
+     style="display:flex; align-items:center; gap:8px; color:#ff6b35;">
+    <img src="https://cdn.simpleicons.org/reddit/FF4500" alt="" width="24" height="24">
+    r/meshtastic
+  </a>
+
+  <a href="https://discord.com/invite/ktMAKGBnBs" target="_blank" rel="noopener noreferrer"
+     style="display:flex; align-items:center; gap:8px; color:#9bbcff;">
+    <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="24" height="24">
+    Official Meshtastic Discord
+  </a>
+
+  <a href="https://discord.gg/GfCvcHBZr" target="_blank" rel="noopener noreferrer"
+     style="display:flex; align-items:center; gap:8px; color:#9bbcff;">
+    <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="24" height="24">
+    Baltimore Mesh Discord
+  </a>
+
+  <a href="https://discord.gg/juseZTWTU" target="_blank" rel="noopener noreferrer"
+     style="display:flex; align-items:center; gap:8px; color:#9bbcff;">
+    <img src="https://cdn.simpleicons.org/discord/5865F2" alt="" width="24" height="24">
+    Maryland Mesh Discord
+  </a>
+</div>
+    <span>MARYLAND COMMUNITY NETWORK · COMMUNITY-POWERED · OPEN KNOWLEDGE</span>
+    <span>LONG RANGE · LOW POWER · STRONGER TOGETHER</span>
+  </footer>
+</body>
+</html>

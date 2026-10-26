@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Node Settings | Maryland Mesh</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: #d9f4ff;
+      background: #030a16;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    header {
+      min-height: 100px;
+      padding: 10px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid #15324d;
+      background: #050c18;
+    }
+
+    .brand-image { width: 340px; max-width: 42vw; height: auto; }
+    nav { display: flex; gap: 24px; font-size: 12px; }
+    a { color: #55f5fa; }
+    nav a { color: #d9f4ff; text-decoration: none; }
+    nav a:hover { color: #ff4bd9; }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 30px 24px 60px; }
+
+    .hero {
+      min-height: 280px;
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        linear-gradient(90deg, rgba(3, 10, 22, .96), rgba(3, 10, 22, .62)),
+        url("hero-art-v2.png") center 45% / cover no-repeat;
+      border: 1px solid #173e5b;
+    }
+
+    .eyebrow { color: #55f5fa; letter-spacing: .2em; font-size: 12px; }
+    h1 { margin: 14px 0; font-size: clamp(36px, 6vw, 62px); }
+    .hero p { max-width: 700px; line-height: 1.7; font-size: 18px; }
+
+    .settings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    article {
+      padding: 24px;
+      border: 1px solid #16dce7;
+      background: linear-gradient(135deg, #0c1b2d, #101329);
+    }
+
+    article:nth-child(even) { border-color: #ed39d0; }
+    h2 { color: #69eaff; font-size: 21px; }
+    article p, li { color: #c3d9e8; line-height: 1.7; }
+    li { margin-bottom: 8px; }
+
+    .note {
+      margin-top: 22px;
+      padding: 18px 22px;
+      border-left: 3px solid #ff4bd9;
+      background: #0b1424;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 22px 6%;
+      border-top: 1px solid #15324d;
+      color: #9bbdd2;
+      font-size: 11px;
+      letter-spacing: .15em;
+    }
+
+    @media (max-width: 750px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .brand-image { width: 300px; max-width: 80vw; }
+      nav { flex-wrap: wrap; gap: 14px; }
+      .hero { padding: 28px; }
+      .settings { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img class="brand-image" src="maryland-mesh-logo.png" alt="Maryland Mesh">
+    </a>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="get-started.html">GET STARTED</a>
+      <a href="#settings">NODE SETTINGS</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">MARYLAND MESH · NODE SETTINGS</div>
+      <h1>Configure your node</h1>
+      <p>A few settings determine which nodes your device can hear. Coordinate with your local mesh before changing radio settings.</p>
+    </section>
+
+    <section class="settings" id="settings">
+      <article>
+        <h2>1. Choose the correct region</h2>
+        <p>The region setting selects the radio band your node is allowed to use. Choose the region that matches where you will operate; for Maryland, that is the US region.</p>
+      </article>
+
+      <article>
+        <h2>2. Match the local mesh</h2>
+        <p>Nodes need matching LoRa settings to communicate. Ask the Maryland Mesh community which modem preset and channel to use before changing them.</p>
+        <a href="https://meshtastic.org/docs/getting-started/joining-your-local-mesh/">Read the official local mesh guide →</a>
+      </article>
+
+      <article>
+        <h2>3. Start with the usual device role</h2>
+        <p>For most personal nodes, the <strong>CLIENT</strong> role is the normal starting point. Special roles such as ROUTER are for planned infrastructure nodes, not a general range boost.</p>
+        <a href="https://meshtastic.org/docs/configuration/tips/">Read the official role tips →</a>
+      </article>
+
+      <article>
+        <h2>4. Keep private channel details private</h2>
+        <p>Only share private channel links or QR codes with the people meant to join that channel. Check with your group before sharing channel details publicly.</p>
+      </article>
+    </section>
+    <section class="settings">
+  <article>
+    <h2>MARYLAND MESH · LOCAL RADIO SETTINGS</h2>
+    <p><strong>Modem preset</strong><br>LONG_FAST</p>
+    <p><strong>Channel / frequency slot</strong><br>20</p>
+    <p>Match these settings to connect with nearby Maryland Mesh nodes.</p>
+  </article>
+</section>
+    <aside class="note">
+      <strong>Before changing settings:</strong> write down the current values or save a copy of your configuration. If your node stops seeing nearby devices, compare its settings with the local mesh.
+    </aside>
+  </main>
+
+  <footer style="text-align:center;">MARYLAND MESH · COMMUNITY-POWERED · OPEN KNOWLEDGE</footer>
+</body>
+</html>
