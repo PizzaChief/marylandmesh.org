@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tower" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#22efff"/>
+      <stop offset="1" stop-color="#ff35dc"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#030a16"/>
+  <g fill="none" stroke="url(#tower)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path stroke-width="3.5" d="M32 19 19 53h26L32 19Z"/>
+    <path stroke-width="3" d="m24 40 16 0M27 32h10M27 53l5-34 5 34M22 18a14 14 0 0 1 0-15M42 3a14 14 0 0 1 0 15M27 15a7 7 0 0 1 0-9M37 6a7 7 0 0 1 0 9"/>
+    <circle cx="32" cy="3.5" r="2" fill="#22efff" stroke="none"/>
+  </g>
+</svg>
