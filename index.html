@@ -161,7 +161,8 @@
     footer {
       padding: 22px 6%;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
       gap: 15px;
       border-top: 1px solid #15324d;
       color: #9bbdd2;
@@ -184,6 +185,9 @@
       .cards { grid-template-columns: 1fr; }
       footer { flex-direction: column; }
     }
+
+    .trademark-note { max-width: 900px; margin: 10px auto 0; text-align: center; font-size: 13px; line-height: 1.5; letter-spacing: normal; }
+    .trademark-note a { color: #55f5fa; }
   </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
@@ -288,6 +292,7 @@
   </a>
 </div>
     <span>MARYLAND COMMUNITY NETWORK · COMMUNITY-POWERED · LONG RANGE</span>
+    <p class="trademark-note">Meshtastic® and the Meshtastic logo are trademarks of Meshtastic LLC. Maryland Mesh is an independent community site and is not affiliated with or endorsed by the Meshtastic project. <a href="https://meshtastic.org/docs/legal/licensing-and-trademark/" target="_blank" rel="noopener noreferrer">Trademark details</a>.</p>
     </footer>
   <script>
     fetch("https://api.meshtastic.org/github/firmware/list")
