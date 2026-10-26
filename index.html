@@ -71,9 +71,9 @@
       min-width: 0;
       margin: 0;
       padding: 8px 13px;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       align-items: center;
-      justify-content: space-between;
       gap: 12px;
       border: 2px solid transparent;
       border-radius: 11px;
@@ -81,14 +81,15 @@
       box-shadow: 0 0 13px rgba(33, 224, 245, .16), 0 0 16px rgba(243, 51, 219, .08), inset 0 0 10px rgba(33, 224, 245, .04);
     }
     .radio-segment { min-width: 0; display: flex; align-items: center; gap: 10px; }
-    .radio-segment + .radio-segment { padding-left: 13px; border-left: 1px solid rgba(55, 233, 249, .5); }
+    .radio-segment > div { flex: 1 1 auto; min-width: 0; }
+    .radio-segment + .radio-segment { min-width: 0; padding-left: 13px; border-left: 1px solid rgba(55, 233, 249, .5); }
     .radio-icon { width: 30px; height: 30px; flex: none; color: #39efff; filter: drop-shadow(0 0 6px rgba(54, 234, 255, .6)); }
     .radio-segment:first-child .radio-icon { color: #ef3bd7; }
-    .radio-label { margin: 0 0 4px; color: #55f4f6; font-family: "Orbitron", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .07em; white-space: nowrap; }
-    .radio-main { margin: 0; color: #f33bda; font-family: "Orbitron", sans-serif; font-size: clamp(13px, 1vw, 16px); font-weight: 800; letter-spacing: .01em; white-space: nowrap; }
+    .radio-label { margin: 0 0 4px; color: #55f4f6; font-family: "Orbitron", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .07em; line-height: 1.4; white-space: normal; overflow-wrap: anywhere; }
+    .radio-main { margin: 0; color: #f33bda; font-family: "Orbitron", sans-serif; font-size: clamp(13px, 1vw, 16px); font-weight: 800; letter-spacing: .01em; line-height: 1.35; white-space: normal; overflow-wrap: anywhere; }
     .radio-main a { color: #58f5fb; text-decoration: none; }
     .radio-main a:hover { color: #fff; }
-    .radio-detail { display: block; margin-top: 3px; color: #b4cddb; font-family: "Rajdhani", sans-serif; font-size: 10px; letter-spacing: .04em; }
+    .radio-detail { display: block; margin-top: 3px; color: #b4cddb; font-family: "Rajdhani", sans-serif; font-size: 11px; line-height: 1.35; letter-spacing: .04em; overflow-wrap: anywhere; }
 
     .hero {
       min-height: 490px;
@@ -173,6 +174,12 @@
     @media (max-width: 1100px) {
       .header-top { align-items: flex-start; flex-direction: column; gap: 14px; }
       .radio-quicklook { width: 100%; flex: 1 1 auto; }
+    }
+
+    @media (max-width: 760px) {
+      .radio-quicklook { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .radio-segment + .radio-segment { margin-top: 10px; padding: 10px 0 0; border-top: 1px solid rgba(55, 233, 249, .5); border-left: 0; }
+      .radio-label { font-size: 10px; }
     }
 
     @media (max-width: 750px) {
