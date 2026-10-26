@@ -302,7 +302,7 @@
     <p class="trademark-note">Meshtastic® and the Meshtastic logo are trademarks of Meshtastic LLC. Maryland Mesh is an independent community site and is not affiliated with or endorsed by the Meshtastic project. <a href="https://meshtastic.org/docs/legal/licensing-and-trademark/" target="_blank" rel="noopener noreferrer">Trademark details</a>.</p>
     </footer>
   <script>
-    fetch("https://api.meshtastic.org/github/firmware/list")
+    fetch("https://api.meshtastic.org/github/firmware/list", { cache: "no-store" })
       .then(response => { if (!response.ok) throw new Error("Firmware list unavailable"); return response.json(); })
       .then(data => {
         const release = data.releases?.stable?.[0];
