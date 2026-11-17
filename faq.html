@@ -11,7 +11,7 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Answers to common questions about Meshtastic, Maryland Mesh radio settings, coverage, and privacy.">
+  <meta name="description" content="Answers about Meshtastic, MeshCore, Maryland Mesh radio settings, coverage, and privacy.">
   <title>FAQ | Maryland Mesh</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +56,7 @@
       <a href="index.html">HOME</a>
       <a href="get-started.html">GET STARTED</a>
       <a href="node-settings.html">NODE SETTINGS</a>
+      <a href="https://monitor.marylandmesh.org/" target="_blank" rel="noopener noreferrer">MARYLAND LIVE MAP ↗</a>
       <a href="neighbors.html">NEIGHBORS</a>
       <a href="faq.html" aria-current="page">FAQ</a>
       <a href="mailto:contact@marylandmesh.org">CONTACT</a>
@@ -66,13 +67,25 @@
     <section class="hero">
       <div class="eyebrow">MARYLAND MESH · QUICK ANSWERS</div>
       <h1>FREQUENTLY ASKED QUESTIONS</h1>
-      <p>New to Meshtastic? These answers cover the radio basics, getting started, Maryland settings, and what to know about privacy.</p>
+      <p>Learn about the local Meshtastic network, how MeshCore differs, Maryland radio settings, and what to know about privacy.</p>
     </section>
 
     <section class="faq-list" aria-label="Frequently asked questions">
       <details>
         <summary>What is Meshtastic?</summary>
         <p>Meshtastic is an open-source communication system that uses low-power LoRa radios. Nearby nodes can relay messages across a mesh without cellular service or internet access for the radio link. <a href="https://meshtastic.org/docs/introduction/" target="_blank" rel="noopener noreferrer">Read the official introduction →</a></p>
+      </details>
+      <details id="meshcore-comparison">
+        <summary>How are Meshtastic and MeshCore different?</summary>
+        <p>Both are off-grid messaging systems that use LoRa radios, but they are separate projects with different firmware, apps, network behavior, and communities. A Meshtastic radio cannot exchange messages directly with a MeshCore radio just because they are nearby; the devices need compatible firmware and settings for the same network. Meshtastic generally lets compatible mesh nodes relay traffic without requiring a dedicated router. MeshCore uses companion devices to connect users and purpose-built repeater devices to extend coverage. <a href="https://meshtastic.org/docs/introduction/" target="_blank" rel="noopener noreferrer">Meshtastic overview →</a> · <a href="https://meshcore.io/docs" target="_blank" rel="noopener noreferrer">MeshCore guides →</a></p>
+      </details>
+      <details>
+        <summary>What are the pros and cons of each?</summary>
+        <p><strong>Meshtastic:</strong> A good fit if you want to join the Maryland Mesh public network, which uses Meshtastic settings. It is decentralized and supports messaging without a dedicated router; optional features include location sharing and telemetry. The tradeoff is that nodes still need compatible region, modem preset, frequency slot, and channel settings, and coverage depends on which Meshtastic nodes are actually within radio range.<br><br><strong>MeshCore:</strong> A good fit if you want to try its distinct companion-and-repeater approach or join a MeshCore network where one is active. It has its own guides, firmware, apps, and repeater roles. The tradeoff is that it is a separate network: MeshCore users need MeshCore-compatible firmware and nearby MeshCore nodes or repeaters, and it does not extend the Maryland Meshtastic network. Neither system is universally better; check local activity, device support, and the features you need before choosing. <a href="https://meshtastic.org/docs/overview/mesh-algo/" target="_blank" rel="noopener noreferrer">How Meshtastic relays messages →</a> · <a href="https://meshcore.io/docs" target="_blank" rel="noopener noreferrer">MeshCore setup and repeater information →</a></p>
+      </details>
+      <details>
+        <summary>Can one system's repeater extend the other system?</summary>
+        <p>No. A Meshtastic repeater relays Meshtastic traffic, while a MeshCore repeater relays MeshCore traffic. They do not bridge each other by default. Before buying or installing hardware, check that the exact device supports the firmware and role you plan to use, and confirm which network is active in your area.</p>
       </details>
       <details>
         <summary>What do I need to get started?</summary>
